@@ -5,7 +5,7 @@ let timerId = null;
 stoptBtn.disabled = true;
 function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
+  };
 
 const onStartClick = () => {
     timerId = setInterval(() => {
@@ -15,14 +15,12 @@ const onStartClick = () => {
     }, 1000);
 
   };
+  
 function onStopClick () {
     startBtn.disabled = false;
     clearInterval(timerId);
     stoptBtn.disabled = true;
-}
-    
-
-
+};
 
 stoptBtn.addEventListener("click",onStopClick )
 startBtn.addEventListener('click', onStartClick);
